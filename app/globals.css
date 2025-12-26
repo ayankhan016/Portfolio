@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(199, 232, 249, 0.18), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(11, 18, 122, 0.25), transparent 55%),
+    radial-gradient(circle at 50% 100%, rgba(0, 255, 221, 0.15), transparent 60%);
+  z-index: -1;
+}
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(19, 7, 43, 0.25), transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(0, 255, 221, 0.18), transparent 50%);
+  z-index: -1;
+}
+
+
+
+@keyframes fall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(120%);
+  }
+}
+
+.code-column {
+  position: absolute;
+  top: -100%;
+  font-family: monospace;
+  font-size: 18px;
+  line-height: 2.2rem;
+  color: rgba(120, 200, 255, 0.25);
+  white-space: pre;
+  animation: fall linear infinite;
+  filter: blur(0.5px);
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(120%);
+    opacity: 1;
+  }
+}
+
+
