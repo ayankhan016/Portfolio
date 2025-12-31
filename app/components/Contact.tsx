@@ -1,38 +1,49 @@
 export default function Contact() {
   return (
-  <section id="Contact" className="relative max-w-6xl mx-auto px-20 py-1">
+    <section id="contact" className="max-w-5xl mx-auto px-6 py-32">
+      
+      <div className="text-center mb-20">
+        <h2 className="text-5xl md:text-6xl font-semibold mb-4">
+          <span className="bg-gradient-to-r from-rose-400 to-violet-400 bg-clip-text text-transparent">
+            Contact
+          </span>
+        </h2>
+        <p className="text-gray-400 text-lg">
+          Have a project or idea in mind? Let’s work together.
+        </p>
+      </div>
 
-      <h2 className="text-4xl font-bold mb-6">Contact</h2>
-      <p className="text-gray-400 mb-10">
-        Have a project or idea in mind? Let’s work together.
-      </p>
+      <form className="space-y-8 max-w-3xl mx-auto">
 
-      <form className="space-y-6">
         <input
           type="text"
           placeholder="Your name"
-          className="w-full p-5 bg-black border border-white/10 focus:border-white/40 outline-none"
-
+          className="w-full bg-transparent border-b border-white/20 py-4 px-2 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition"
         />
 
         <input
           type="email"
           placeholder="Your email"
-    className="w-full p-5 bg-black border border-white/10 focus:border-white/40 outline-none"
-
+          className="w-full bg-transparent border-b border-white/20 py-4 px-2 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition"
         />
 
         <textarea
           placeholder="Your message"
           rows={5}
-         className="w-full p-5 bg-black border border-white/10 focus:border-white/40 outline-none"
-
+          className="w-full bg-transparent border-b border-white/20 py-4 px-2 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition resize-none"
         />
 
-        <button className="px-8 py-3 bg-white text-black hover:opacity-80 transition">
-          Send Message
-        </button>
+        <div className="pt-10">
+          <button
+            type="submit"
+            className="px-10 py-4 rounded-full bg-white text-black font-medium hover:scale-105 hover:shadow-lg transition"
+          >
+            Send Message
+          </button>
+        </div>
+
       </form>
     </section>
   );
 }
+

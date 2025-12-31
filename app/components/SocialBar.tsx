@@ -20,7 +20,7 @@ export default function SocialBar() {
       </a>
 
       <a
-        href="https://wa.me/6005605241"
+        href="https://wa.me/9541699198"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-green-500 transition"

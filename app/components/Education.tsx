@@ -1,21 +1,21 @@
 export default function Education() {
   const education = [
     {
-    school: "Interface Learning School, Srinagar",
-    period: "2024 – 2027",
-    title: "Diploma in Software Engineering & Computer Science",
-    desc:
-      "A hands-on diploma program focused on modern software development and web technologies. Gaining strong practical experience through real-world projects, coding labs, and collaborative learning.",
-    skills: "Front End Development • Web Apps • JavaScript • UI Design",
-    url: "https://ilssrinagar.com/" // <-- ILS website
-  },
+      school: "Interface Learning School, Srinagar",
+      period: "2024 – 2027",
+      title: "Diploma in Software Engineering & Computer Science",
+      desc:
+        "A hands-on diploma program focused on modern software development and web technologies. Gaining strong practical experience through real-world projects, coding labs, and collaborative learning.",
+      skills: "Front End Development • Web Apps • JavaScript • UI Design",
+      url: "https://ilssrinagar.com/"
+    },
     {
       school: "Sri Pratap Higher Secondary School",
       period: "2024 – 2025",
       title: "Higher Secondary Education (Class 11 & 12)",
       desc:
         "Completed higher secondary education with a strong focus on computer science, programming fundamentals, and logical thinking, building a solid foundation for a career in software development.",
-      skills: "Computer Science  • Logic • Mathematics",
+      skills: "Computer Science • Logic • Mathematics",
     },
   ];
 
@@ -28,7 +28,9 @@ export default function Education() {
         </span>
       </h2>
 
-      <div className="space-y-12">
+      {/* THIS is what fixes the spacing */}
+      <div className="max-w-6xl mx-auto px-6 space-y-12">
+
         {education.map((e) => (
           <div
             key={e.school}
@@ -39,14 +41,20 @@ export default function Education() {
 
             <div className="relative z-10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
-               <a
-                 href={e.url}
-                 target="_blank"
-                 rel="noopener noreferrer"
-                  className="text-2xl font-semibold text-white hover:text-cyan-400 transition underline-offset-4 hover:underline" >
-                  {e.school}
-              </a>
-
+                {e.url ? (
+                  <a
+                    href={e.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl font-semibold text-white hover:text-cyan-400 transition underline-offset-4 hover:underline"
+                  >
+                    {e.school}
+                  </a>
+                ) : (
+                  <span className="text-2xl font-semibold text-white">
+                    {e.school}
+                  </span>
+                )}
 
                 <span className="text-sm text-gray-400 mt-2 md:mt-0">
                   {e.period}
@@ -67,6 +75,7 @@ export default function Education() {
             </div>
           </div>
         ))}
+
       </div>
     </section>
   );
