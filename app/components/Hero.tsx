@@ -29,7 +29,7 @@ export default function Hero() {
           {/* Buttons */}
           <div className="mt-10 flex gap-6">
             <a
-              href="/my resume.pdf"
+              href="/myresume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-white text-black rounded-full hover:opacity-80 transition"
